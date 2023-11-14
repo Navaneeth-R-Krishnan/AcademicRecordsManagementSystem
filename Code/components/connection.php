@@ -1,15 +1,19 @@
 <?php
-define('DB_SERVER', ''); // enter database server name here
-define('DB_USERNAME', ''); //enter username here
-define('DB_PASSWORD', ''); // password here
-define('DB_NAME', ''); // name of database here
- 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'dbms_academic_records');
+
 /* Attempt to connect to MySQL database */
-try{
+try {
     $con = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USERNAME, DB_PASSWORD);
     // Set the PDO error mode to exception
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e){
+    echo "Connected successfully"; // If no error, this message will be displayed
+} catch(PDOException $e) {
     die("ERROR: Could not connect. " . $e->getMessage());
 }
 ?>
