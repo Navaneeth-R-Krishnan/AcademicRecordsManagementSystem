@@ -7,9 +7,7 @@ A web-based application for managing academic records using PHP and MySQL.
 - [About](#about)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## About
 
